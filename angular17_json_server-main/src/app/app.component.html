@@ -1,0 +1,117 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card">
+      <div class="card-header bg-success">
+        <div class="row">
+          <div class="col-6">
+            Lista de Usuários
+          </div>
+          <div class="col-6 text-end">
+            <button class="btn btn-primary btn-sm" id="btnAdicionar" (click)="onAbrir()">Adicionar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Primeiro Nome</th>
+              <th scope="col">Sobrenome</th>
+              <th scope="col">Cargo</th>
+              <th scope="col">Cidade</th>
+              <th scope="col">Estado</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of userList; let i = index">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{item.fName}}</td>
+              <td>{{item.lName}}</td>
+              <td>{{item.userName}}</td>
+              <td>{{item.city}}</td>
+              <td>{{item.state}}</td>
+              <td>
+                <button class="btn btn-primary btn-sm" (click)="onEdit(item)">Editar</button>
+                <button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">Excluir</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-4" *ngIf="mostrarNovoUsuario">
+    <div class="card">
+      <div class="card-header bg-success">
+        <div class="row">
+          <div class="col-6">
+            Novo Usuário
+          </div>
+          <div class="col-6 text-end">
+            <button class="btn btn-primary btn-sm" id="btnFechar" (click)="onFechar()">Fechar</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Primeiro Nome</label>
+            <input type="text" name="fName" [(ngModel)]="userObj.fName" class="form-control" id="validationCustom01" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Sobrenome</label>
+            <input type="text" name="lName" [(ngModel)]="userObj.lName" class="form-control" id="validationCustom02" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label">Cargo</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend"></span>
+              <input type="text" name="userName" [(ngModel)]="userObj.userName" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Cidade</label>
+            <select class="form-select" name="city" [(ngModel)]="userObj.city">
+              <option selected disabled value="">Escolha...</option>
+              <option *ngFor="let item of cityList$ | async" [value]="item.name">{{item.name}}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Estado</label>
+            <select class="form-select" id="validationCustom04" name="state" [(ngModel)]="userObj.state">
+              <option selected disabled value="">Escolha...</option>
+              <option *ngFor="let item of stateList$ | async" [value]="item.name">{{item.name}}</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">CEP</label>
+            <input type="text" name="zipCode" [(ngModel)]="userObj.zipCode" class="form-control" id="validationCustom05" required>
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="button" (click)="onSaveUser()" id="btnCadastrar"(Click) ="clearForm()" >Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

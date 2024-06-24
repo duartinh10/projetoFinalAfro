@@ -1,0 +1,34 @@
+.card{
+    background-color: #fcf7ee;
+}
+.card-header.bg-success {
+    /* Estilos aplicados apenas quando ambas as classes estão presentes no mesmo elemento */
+    border: 3px solid #bb5e24 !important;
+    background: #f6e8cf !important;
+    background-color:  #f6e8cf !important;
+    color: white;
+    padding-right: 85px;
+}
+
+.row{
+    background-color: #f6e8cf;
+    color: #bb5e24;
+    border-color: #f6e8cf;
+    font-size: large;
+    font-weight: 600;
+}
+
+#btnAdicionar{
+    background-color: #9c4321;
+    border-color: #9c4321;
+}
+
+#btnFechar{
+    background-color: #9c4321;
+    border-color: #9c4321;
+}
+
+#btnCadastrar{
+    background-color: #9c4321;
+    border-color: #9c4321;
+}

@@ -1,0 +1,102 @@
+{
+  "userList": [
+    {
+      "id": "865476",
+      "fName": "MATHEUS",
+      "lName": "MARTINS",
+      "zipCode": "29166870",
+      "userName": "123",
+      "city": "Mumbai",
+      "state": "PUN",
+      "userId": 504955
+    },
+    {
+      "id": 31880,
+      "fName": "MATHEUS",
+      "lName": "MARTINS",
+      "zipCode": "29166870",
+      "userName": "wewe",
+      "city": "Mumbai",
+      "state": "MAH",
+      "userId": 106467
+    },
+    {
+      "id": 89856,
+      "fName": "MATHEUS",
+      "lName": "MARTINS",
+      "userName": "duartinh10",
+      "city": "Thane",
+      "state": "GOA",
+      "zipCode": "29166870",
+      "userId": 295960
+    },
+    {
+      "id": 933896,
+      "userId": 691462,
+      "userName": "testand3o25",
+      "fName": "MATHEUS",
+      "lName": "MARTINS",
+      "city": "Mumbai",
+      "state": "PUN",
+      "zipCode": "29166870"
+    },
+    {
+      "id": 427147,
+      "userId": 526219,
+      "userName": "testand3o25",
+      "fName": "MATHEUS",
+      "lName": "MARTINSdfs",
+      "city": "Mumbai",
+      "state": "PUN",
+      "zipCode": "29166870"
+    },
+    {
+      "id": 666185,
+      "fName": "MATHEUS",
+      "lName": "MARTINS",
+      "zipCode": "29166870",
+      "userName": "123teste",
+      "city": "Mumbai",
+      "state": "PUN",
+      "userId": 731392
+    },
+    {
+      "id": 756008,
+      "fName": "MATHEUSasda",
+      "lName": "MARTINS",
+      "zipCode": "29166870",
+      "userName": "123teste",
+      "city": "Mumbai",
+      "state": "PUN",
+      "userId": 302368
+    }
+  ],
+  "cityList": [
+    {
+      "id": "1",
+      "name": "Pune"
+    },
+    {
+      "id": "2",
+      "name": "Mumbai"
+    },
+    {
+      "id": "3",
+      "name": "Thane"
+    }
+  ],
+  "stateList": [
+    {
+      "id": "1",
+      "name": "MAH"
+    },
+    {
+      "id": "2",
+      "name": "GOA"
+    },
+    {
+      "id": "3",
+      "name": "PUN"
+    }
+  ]
+}
