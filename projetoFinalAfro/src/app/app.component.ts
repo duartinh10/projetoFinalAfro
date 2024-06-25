@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 
-interface City {
+interface Gener {
   id: number;
   name: string;
 }
@@ -25,13 +25,13 @@ interface State {
 export class AppComponent implements OnInit {
   userObj: Partial<USER> = {}; // Use Partial para não exigir todos os campos
   http = inject(HttpClient);
-  cityList$: Observable<City[]> = new Observable<City[]>();
+  genero$: Observable<Gener[]> = new Observable<Gener[]>();
   stateList$: Observable<State[]> = new Observable<State[]>();
   userList: USER[] = [];
   mostrarNovoUsuario: boolean = true;
 
   ngOnInit(): void {
-    this.cityList$ = this.http.get<City[]>("http://localhost:3000/cityList");
+    this.genero$ = this.http.get<Gener[]>("http://localhost:3000/genero");
     this.stateList$ = this.http.get<State[]>("http://localhost:3000/stateList");
     this.getUsers();
   }

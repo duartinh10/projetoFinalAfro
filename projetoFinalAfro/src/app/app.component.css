@@ -31,4 +31,12 @@
 #btnCadastrar{
     background-color: #9c4321;
     border-color: #9c4321;
+    margin-left: 80px;
+    margin-right: 120px;
+}
+
+#btneditacao{
+    background-color: #9c4321;
+    border-color: #9c4321;
+    
 }

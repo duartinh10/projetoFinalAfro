@@ -19,7 +19,7 @@
               <th scope="col">Primeiro Nome</th>
               <th scope="col">Sobrenome</th>
               <th scope="col">Cargo</th>
-              <th scope="col">Cidade</th>
+              <th scope="col">Gênero</th>
               <th scope="col">Estado</th>
               <th>Ação</th>
             </tr>
@@ -33,7 +33,7 @@
               <td>{{item.city}}</td>
               <td>{{item.state}}</td>
               <td>
-                <button class="btn btn-primary btn-sm" (click)="onEdit(item)">Editar</button>
+                <button class="btn btn-primary btn-sm" (click)="onEdit(item)" >Editar</button>
                 <button class="btn btn-danger btn-sm" (click)="onDelete(item.id)">Excluir</button>
               </td>
             </tr>
@@ -81,10 +81,10 @@
             </div>
           </div>
           <div class="col-md-6">
-            <label for="validationCustom03" class="form-label">Cidade</label>
+            <label for="validationCustom03" class="form-label">Gênero</label>
             <select class="form-select" name="city" [(ngModel)]="userObj.city">
               <option selected disabled value="">Escolha...</option>
-              <option *ngFor="let item of cityList$ | async" [value]="item.name">{{item.name}}</option>
+              <option *ngFor="let item of genero$ | async" [value]="item.name">{{item.name}}</option>
             </select>
             <div class="invalid-feedback">
               Please provide a valid city.
@@ -109,6 +109,7 @@
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="button" (click)="onSaveUser()" id="btnCadastrar"(Click) ="clearForm()" >Cadastrar</button>
+            <button class="btn btn-primary" type="button" id="btneditacao"(Click) ="clearForm()" (click)="onFechar()">Editar</button>
           </div>
         </form>
       </div>
