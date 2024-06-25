@@ -88,7 +88,6 @@ export class AppComponent implements OnInit {
 
   clearForm(): void {
     this.userObj = { fName: '', lName: '', userName: '', city: '', state: '' };
-    //this.isEditing = false;
   }
 }
 
